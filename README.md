@@ -1,117 +1,63 @@
 #Java DRDA Hello World Sample Application
 
-##Structure
+##Where are the important files?
 
 ###Relevant files:
 
 ####src/com/ibm/informix/java_drda_HelloWorld.java
 
-This file contains sample data interacting with a database.
+This file contains all of the sample data interacting with the database.
 
 ####manifest.yml
 
-This file gives details to Bluemix about the application.
-
-####src/main/webapp/index.jsp
-
-This file is the homepage.
-
-####WebContent/WEB-INF/web.xml
-
-This file contains the details about deploying to the web.
+If deploying to bluemix, this file gives details about the application.
 
 ####build.gradle
 
-This file gathers dependencies and builds the .war file needed to deploy to Bluemix.
+This file gathers dependencies and will build a war file if needed to deploy to Bluemix.
 
-##Deploy application to Bluemix
+##What can I do with this example?
 
-###Option 1: Deploying to Bluemix from a local machine
+###Option 1: Deploy to Bluemix
 
 ####Requirements:
 
-Git - you use to download the application. <Link to download Git>
+Git - Used to download the application.
 
-CloudFoundry CLI -  you use to push the application to Bluemix. <Link to download CLI>
+Gradle -  Used to get dependencies and build the application.
 
-Gradle -  you use to get dependencies and build the application. <Link to download Gradle>
+CloudFoundry CLI -  Used to push the application to Bluemix.
 
 ####Procedure:
 
-Clone repository to local machine
+ * Step 1: Clone repository to local machine
+
+ * Step 2: Download driver and place it in the WebContent/WEB-INF/lib/ directory. You may need to create a 'lib' folder.
+
+DRDA Download -> http://www-01.ibm.com/support/docview.wss?uid=swg21363866
+
+ * Step 3: Use gradle to build a war file.
 	
-	git clone <url>
-	git submodule init
-	git submodule update
+ * Step 4: Push application to Bluemix using CloudFoundry CLI.
 
-or 
+###Option 2: Run locally
 
-	git clone --recursive <url>
+####Requirements:
 
-	
-Download the corresponding driver to the project you wish to run.
+Git - Used to download the application.
 
-DRDA -> <link>
+Gradle -  Used to get dependencies.
 
-SQLI -> <link>
+####Procedure:
 
-Mongo -> <compile gradle>
+ * Step 1: Clone repository to local machine
+ 
+ * Step 2: Specify the connection information
+ 
+ * Step 3: Download driver
+ 
+DRDA Download -> http://www-01.ibm.com/support/docview.wss?uid=swg21363866
 
-Set to include in the WebContent/WEB-INF/lib/ directory. You may need to create a 'lib' folder
+ * Step 4: Use gradle to copy runtime dependencies
 
-Navigate to the root directory of the project you wish to run, it should contain a build.gradle file.
-
-Run gradle
-	
-	gradle build
-	
-This should create a .war file.
-	
-Connect to Bluemix
-	
-	cf api https://api.ng.bluemix.net
-	
-Log into Bluemix
-	
-	cf login
-	
-Enter user and pass
-	
-	jondoe@ibm.com
-	password
-	
-Push application
-	
-	cf push <YourAppName>
-
-###Option 2: Deploy from JazzHub
-
-I don't know how to do this yet, but dataworks docs says
-
-See the JazzHub documentation for full information, but the steps are as follows:
-
-Open this project in a new browser window.
-
-Click EDIT CODE, and log in to JazzHub if you are not already authenticated.
-
-Click Fork.
-
-Provide a name for your copy of the sample and click Save.
-
-When the project is copied into your repository, click BUILD & DEPLOY.
-
-Click Project Settings.
-
-Select Deploy to Bluemix, keep the other default values, and click Save.
-
-On BUILD & DEPLOY, click ADVANCED, and click add a builder.
-
-Keep the default values in the Add Builder page, and click SAVE.
-
-Click REQUEST BUILD.
-
-When the build has completed and you see a green check mark, click add a stage.
-
-Provide a unique application name and click SAVE.
-
-In the pipeline, drag the Build button to the deployment space to deploy the application to Bluemix. The number of times that the application has been built is displayed in the button.
+ * Step 5: Deploy as a web application
