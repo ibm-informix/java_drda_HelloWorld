@@ -34,7 +34,7 @@ CloudFoundry CLI -  Used to push the application to Bluemix.
 
  * Step 2: Download driver and place it in the WebContent/WEB-INF/lib/ directory. You may need to create a 'lib' folder.
 
-DRDA Download -> http://www-01.ibm.com/support/docview.wss?uid=swg21363866
+[Data Server JDBC (DRDA) Download](http://www-01.ibm.com/support/docview.wss?uid=swg21363866)
 
  * Step 3: Use gradle to build a war file.
 	
