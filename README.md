@@ -56,7 +56,7 @@ Gradle -  Used to get dependencies.
  
  * Step 3: Download driver
  
-DRDA Download -> http://www-01.ibm.com/support/docview.wss?uid=swg21363866
+[Data Server JDBC (DRDA) Download](http://www-01.ibm.com/support/docview.wss?uid=swg21363866)
 
  * Step 4: Use gradle to copy runtime dependencies
 
