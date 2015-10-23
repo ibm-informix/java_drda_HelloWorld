@@ -37,8 +37,10 @@ CloudFoundry CLI -  Used to push the application to Bluemix.
 [Data Server JDBC (DRDA) Download](http://www-01.ibm.com/support/docview.wss?uid=swg21363866)
 
  * Step 3: Use gradle to build a war file.
-	
- * Step 4: Push application to Bluemix using CloudFoundry CLI.
+ 
+ * Step 4: Update the manifest.yml to match the name, host, and domain of your Bluemix application.
+ 	
+ * Step 5: Push application to Bluemix using CloudFoundry CLI.
 
 ###Option 2: Run locally
 

@@ -242,6 +242,7 @@ public class java_drda_HelloWorld {
     
 	public static void parseVcap() {
 
+		String serviceName = "timeseriesdatabase";
 		StringReader stringReader = new StringReader(
 				System.getenv("VCAP_SERVICES"));
 		JsonReader jsonReader = Json.createReader(stringReader);
@@ -249,11 +250,11 @@ public class java_drda_HelloWorld {
 		System.out.println("vcap: " + vcap);
 		boolean ssl = true;
 		if (ssl)
-			DRDAURL = vcap.getJsonArray("altadb-dev").getJsonObject(0)
-					.getJsonObject("credentials").getString("ssl_drda_url");
+			DRDAURL = vcap.getJsonArray(serviceName).getJsonObject(0)
+					.getJsonObject("credentials").getString("java_drda_url_ssl");
 		else
-			DRDAURL = vcap.getJsonArray("altadb-dev").getJsonObject(0)
-					.getJsonObject("credentials").getString("drda_url");
+			DRDAURL = vcap.getJsonArray(serviceName).getJsonObject(0)
+					.getJsonObject("credentials").getString("java_drda_url");
 		System.out.println(DRDAURL);
 	}
 
