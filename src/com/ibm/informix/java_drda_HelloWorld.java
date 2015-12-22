@@ -37,7 +37,7 @@ public class java_drda_HelloWorld {
 	
 	// To run locally, set the URL here
 	// For example: URL = "jdbc:db2://localhost:9090/testdb:user=myuser;password=mypassword;";
-	public static String URL = "jdbc:db2://gama.lenexa.ibm.com:9210/testdb:user=informix;password=Ibm4ever;";
+	public static String URL = "";
 		
 	// Service name for if credentials are parsed out of the Bluemix VCAP_SERVICES
 	public static String SERVICE_NAME = "timeseriesdatabase";
